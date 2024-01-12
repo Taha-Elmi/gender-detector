@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Detector</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+<div class="rectangle">
+    <div class="left-section">
+        <h2>
+            Mr. or Ms.?
+        </h2>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z ]+" placeholder="Enter the name here" maxlength="255">
+
+        <div class="radio-container">
+            <label>
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+        </div>
+
+        <button type="submit" onclick="submitAction()">Submit</button>
+        <button type="submit" onclick="saveData()">Save</button>
+
+        <div id="error-container" class="red-rectangle">
+            <p>An error occurred :(</p>
+        </div>
+
+    </div>
+
+    <div class="right-section">
+        <h2>Prediction</h2>
+        <p id="prediction">Submit to see the result</p>
+        <p id="probability">Submit to see the probability</p>
+
+        <div class="dashed-rectangle">
+            <h3>Saved Answer</h3>
+            <p id="saved-data">There is no saved answer yet.</p>
+            <button type="submit" onclick="clearLocalStorage()">Clear</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* Set the background image and define its properties */
+body {
+    background-image: url('./background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* Center the rectangle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+/* main rectangle styles */
+.rectangle {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    background-color: rgba(255, 255, 255, 0.7); /* Set the background color with some transparency */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+/* Styles for each section in the main rectangle */
+.left-section, .right-section {
+    padding: 20px;
+}
+
+.left-section {
+    /* I did not put any style, but I thought there must be a class for it :) */
+}
+
+.right-section {
+    /* I did not put any style, but I thought there must be a class for it :) */
+}
+
+/* position the radio buttons below the name input and set some margins */
+.radio-container {
+    margin-top: 10px;
+}
+
+/* Style for the submit and save buttons */
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Style for the dashed rectangle */
+.dashed-rectangle {
+    background-color: rgba(0, 152, 149, 0.5);
+    border: 2px dashed #000;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style for the rectangle that will show errors */
+.red-rectangle {
+    background-color: rgba(255, 0, 0, 0.3);
+    border: 2px solid red;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
